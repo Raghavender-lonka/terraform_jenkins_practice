@@ -18,7 +18,7 @@ pipeline {
         stage('Apply') {
             steps {
                 // Apply the changes using the generated plan file
-                sh 'terraform apply --auto-approve'
+                sh 'terraform apply'
             }
         }
     }
