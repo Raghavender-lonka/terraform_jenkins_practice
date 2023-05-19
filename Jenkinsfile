@@ -3,7 +3,7 @@ pipeline {
 
         stage('Initialize') {
             steps {
-                // Run `terraform init` to initialize the working directory
+                // Run `terraform init` to initialize the working directory.
                 sh 'terraform init'
             }
         }
