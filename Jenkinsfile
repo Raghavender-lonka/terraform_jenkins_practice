@@ -1,25 +1,29 @@
 pipeline {
-    agent any
-
-        stage('Initialize') {
-            steps {
-                // Run `terraform init` to initialize the working directory.
-                sh 'terraform init'
-            }
-        }
-
-        stage('Plan') {
-            steps {
-                // Run `terraform plan` to generate an execution plan
-                sh 'terraform plan -out=tfplan'
-            }
-        }
-
-        stage('Apply') {
-            steps {
-                // Apply the changes using the generated plan file
-                sh 'terraform apply'
-            }
-        }
-   
+    agent any
+    tools {
+       terraform 'terraform_1'
+    }
+    stages {
+        stage('Git checkout') {
+           steps{
+                git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Raghavender-lonka/terraform_jenkins_practice.git'
+            }
+        }
+        stage('terraform init') {
+            steps{
+                 bat 'terraform init'
+            }
+        }
+        stage('terraform plan') {
+            steps{
+                bat 'terraform plan'
+            }
+        }
+        stage('terraform apply') {
+            steps{
+                 bat 'terraform apply -auto-approve'
+            }
+        }
+    }
+   
 }
