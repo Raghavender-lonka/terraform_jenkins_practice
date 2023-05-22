@@ -1,5 +1,5 @@
 policiesName = {
-    first = "Demo1",
+    first = "Demo1_via_jenkins",
     second = "Demo2",
     third = "Demo3"
 }
