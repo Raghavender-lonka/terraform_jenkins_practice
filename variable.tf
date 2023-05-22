@@ -1,4 +1,4 @@
-# variables for policies 
+# variables for policies names
 variable "policiesName" {
   type = map
 }
