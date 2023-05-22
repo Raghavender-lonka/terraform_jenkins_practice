@@ -4,4 +4,4 @@ policiesName = {
     third = "Demo3"
 }
 
-policiesNameList = ["Demo1", "Demo2", "Demo3"]
+policiesNameList = ["Demo1_via_jenkins", "Demo2", "Demo3"]
