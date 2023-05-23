@@ -3,7 +3,7 @@ pipeline {
   environment {
        AWS_REGION = 'us-west-1'
        AWS_ACCESS_KEY_ID = ASIAZ3CUIHQKN5JUVJG5
-       AWS_SECRET_ACCESS_KEY = j5hw5vVaHaiHTAYv+dZlG8iXn9y4FuiKDVZHMvxT  
+       AWS_SECRET_ACCESS_KEY = j5hw5vVaHaiHTAYv+dZlG8iXn9y4FuiKDVZHMvxT
    }
   stages {
       stage('Git checkout') {
