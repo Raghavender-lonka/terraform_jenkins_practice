@@ -3,7 +3,8 @@ pipeline {
   stages {
       stage('Git checkout') {
          steps{
-              git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Raghavender-lonka/terraform_jenkins_practice.git'
+//               git branch: 'main', credentialsId: 'Github', url: 'https://github.com/Raghavender-lonka/terraform_jenkins_practice.git'
+              checkout scm
           }
       }
       stage('terraform init') {
