@@ -23,15 +23,21 @@ pipeline {
                 bat 'terraform init -backend-config="access_key=AKIAZ3CUIHQKNNZF2H5S" -backend-config="secret_key=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"'
           }
       }
-      stage('terraform plan') {
-          steps{
-              bat 'terraform plan'
+//       stage('terraform plan') {
+//           steps{
+//               bat 'terraform plan'
+//           }
+//       }
+//       stage('terraform apply') {
+//           steps{
+//                bat 'terraform apply -auto-approve'
+//           }
+//       }
+       stage('terraform destroy') {
+           steps{
+               bat 'terraform destroy -auto-approve'
           }
       }
-      stage('terraform apply') {
-          steps{
-               bat 'terraform apply -auto-approve'
-          }
-      }
+    
   }
 }
