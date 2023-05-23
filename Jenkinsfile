@@ -20,7 +20,7 @@ pipeline {
       }
       stage('terraform init') {
           steps{
-               bat 'terraform init -backend-config="access_key=ASIAZ3CUIHQKKSKWEULE" -backend-config="secret_key=+uZ7aGanMP7CzDLI+eZhD1yxgPVZiYADXNZpcxHv'
+               bat 'terraform init -backend-config="access_key=ASIAZ3CUIHQKKSKWEULE" -backend-config="secret_key=+uZ7aGanMP7CzDLI+eZhD1yxgPVZiYADXNZpcxHv"'
           }
       }
       stage('terraform plan') {
