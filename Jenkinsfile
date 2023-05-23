@@ -1,5 +1,10 @@
 pipeline {
   agent any
+   environment {
+     AWS_REGION = 'us-west-1'
+     AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
+     AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')  
+   }
   stages {
       stage('Git checkout') {
          steps{
